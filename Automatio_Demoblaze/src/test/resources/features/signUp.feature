@@ -1,7 +1,7 @@
 Feature: feature to test signup functionality
 
 	Background: User in home page
-	  Given browser is open
+	  Given browser is open 
     And user is on home page
     And user set delay 5 seconds
 
