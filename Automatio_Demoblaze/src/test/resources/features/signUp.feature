@@ -1,4 +1,4 @@
-Feature: feature to test signup functionality
+Feature: feature to test signup functionality 
 
 	Background: User in home page
 	  Given browser is open
