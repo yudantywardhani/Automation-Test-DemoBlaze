@@ -17,7 +17,7 @@ public class signUpPage {
 	}
 	
 	public void clickSignUp () {
-		driver.findElement(btn_signup).click();
+		driver.findElement(btn_signup).click(); 
 	}
 	
 	public void formSignUpDisplayed() {

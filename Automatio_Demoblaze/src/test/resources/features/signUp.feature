@@ -20,7 +20,7 @@ Feature: feature to test signup functionality
     
     Examples: 
       | username    | password    |
-      | TEST0806236 | P@ss0806236 |
+      | TEST0806237 | P@ss0806237 |
 
   @NegativeTestCase
   Scenario Outline: Test signup function failed
@@ -37,4 +37,4 @@ Feature: feature to test signup functionality
 
     Examples: 
       | username    | password    |
-      | TEST0806236 | P@ss08062356 |
+      | TEST0806237 | P@ss08062357 |

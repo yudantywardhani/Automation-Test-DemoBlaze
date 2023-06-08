@@ -38,7 +38,7 @@ public class stepDefinitions {
 
 	@Then("verified signup form")
 	public void verified_signup_form() {
-		signup.formSignUpDisplayed();
+		signup.formSignUpDisplayed(); 
 	}
 
 	@When(".*? inputs (.*) and (.*)$")
