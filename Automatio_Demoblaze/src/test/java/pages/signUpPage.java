@@ -44,4 +44,11 @@ public class signUpPage {
 			e.printStackTrace();
 		}
 	}
+//	public void clear_username() {
+//		driver.findElement(txt_username).clear();
+//	}
+//	public void clear_password() {
+//		driver.findElement(txt_password).clear();
+//	}
 }
+
