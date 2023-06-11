@@ -11,7 +11,7 @@ Feature: feature to test signup functionality
   @PositiveTestCase
   Scenario Outline: Test signup function sucess
     And user set delay 5 seconds
-    When user inputs <username> and <password>
+    When user inputs <username> and <password> signup
     And user set delay 5 seconds
     And user clicks on signup button
     And user set delay 5 seconds
@@ -28,7 +28,7 @@ Feature: feature to test signup functionality
     #And user clear username field
     #And user clear password field
     #And user set delay 5 seconds
-    When user inputs <username> and <password>
+    When user inputs <username> and <password> signup
     And user set delay 5 seconds
     And user clicks on signup button
     And user set delay 5 seconds

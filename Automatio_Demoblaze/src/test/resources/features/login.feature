@@ -1,22 +1,47 @@
-Feature: feature to test login functionality 
+Feature: feature to test login functionality
 
-	Background: User in home page
-	  Given browser is open
+  Background: User in home page
+    Given browser is open
     And user is on home page
     And user set delay 5 seconds
-
-	@PositiveTestCase
-  Scenario Outline: Test login function
     When user click login button
     And user set delay 5 seconds
     Then verified login form
-    When user inputs <username1> and <password2>
+
+  @PositiveTestCase
+  Scenario Outline: Test login function sucess
     And user set delay 5 seconds
-    And user clicks on signup button
+    When user inputs <username> and <password> login
+    And user set delay 5 seconds
+    And user clicks on login process button
+    And user set delay 5 seconds
+    Then verified login sucessful
+    And close browser
+
+    Examples: 
+      | username | password |
+      | test     | test     |
+
+  @NegativeTestCase1
+  Scenario Outline: Test login function failed with username and pass empty
+    And user set delay 5 seconds
+    And user clicks on login process button
     And user set delay 5 seconds
     When dialog box is displayed
-    Then user clicks the OK button in the dialog box    
+    Then verified login failed cause username and pass empty 
+    And close browser
 
-    Examples:
-    | username | password |
-    | TEST070823 | P@ss070823 |
+  @NegativeTestCase2
+  Scenario Outline: Test login function failed with wrong password
+    And user set delay 5 seconds
+    When user inputs <username> and <password> login
+    And user set delay 5 seconds
+    And user clicks on login process button
+    And user set delay 10 seconds
+    When dialog box is displayed
+    Then verified login failed cause wrong password
+    And close browser
+
+    Examples: 
+      | username | password    |
+      | test     | P@ss0806235 |
